@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Skin Brawl Stars gratuit ?!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom right, #ffe600, #ff3e3e);
+      color: #222;
+      text-align: center;
+      padding: 40px;
+    }
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      max-width: 500px;
+      margin: auto;
+    }
+    h1 {
+      color: #d60000;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background: #00c853;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      animation: shake 1s infinite;
+      transition: all 0.3s;
+    }
+    button.dance {
+      animation: dance 0.5s infinite;
+      background: #ff1744;
+    }
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+    @keyframes dance {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(10deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(10deg); }
+      100% { transform: rotate(0deg); }
+    }
+    #message {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #ff1744;
+      font-weight: bold;
+    }
+    .skin-img {
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 Tu as gagné un skin Brawl Stars GRATUIT !</h1>
+    <p>Clique vite pour le réclamer avant qu’il disparaisse 👀</p>
+    <button id="claimBtn" onclick="troll()">RÉCLAMER MA RÉCOMPENSE</button>
+    <div id="message"></div>
+    <img id="skin" class="skin-img" src="https://media.tenor.com/YbhDcyeCnb4AAAAC/gigachad-chad.gif" alt="Fake Skin">
+  </div>
+
+  <script>
+    function troll() {
+      const btn = document.getElementById("claimBtn");
+      const message = document.getElementById("message");
+      const skinImg = document.getElementById("skin");
+
+      btn.classList.remove("shake");
+      btn.classList.add("dance");
+      btn.innerText = "TROP TARD 😆";
+
+      message.innerHTML = "🎭 Tu t'es fait troll 😎<br>Ton skin arrive dans... jamais !";
+      skinImg.style.display = "block";
+    }
+  </script>
+</body>
+</html>
